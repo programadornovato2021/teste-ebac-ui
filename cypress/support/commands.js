@@ -26,10 +26,11 @@
 
 
 Cypress.Commands.add('login', (usuario, senha) => { 
-        cy.get('#username').type(usuario) // digitou um login válido
-        cy.get('#password').type(senha) // digitou uma senha válida
-        cy.get('.woocommerce-form > .button').click() // clicou no botao de acesso
- }) 
+       cy.get('#username').type(usuario) // digitou um login válido
+       cy.get('#password').type(senha) // digitou uma senha válida
+       cy.get('.woocommerce-form > .button').click() // clicou no botao de acesso
+}) 
+
 
 
  Cypress.Commands.add('preCadastro', (email, senha, nome, sobrenome) => {
@@ -43,6 +44,7 @@ Cypress.Commands.add('login', (usuario, senha) => {
         cy.get('.woocommerce-Button').click()
  })
 
+
  Cypress.Commands.add('addProdutos', (produto, quantidade) =>{
         cy.get('[class="product-block grid"]')
                 .contains(produto).click()
@@ -51,4 +53,6 @@ Cypress.Commands.add('login', (usuario, senha) => {
         cy.get('.input-text').clear().type(quantidade)
         cy.get('.single_add_to_cart_button').click()  
 
+
+        
  })

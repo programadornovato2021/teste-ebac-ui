@@ -1,4 +1,5 @@
 ///<reference types="cypress"/>
+import EnderecoPage from '../support/page-objects/endereco.page'
 
 describe('Funcionalidade Endereço - Faturamento e Entrega', () => {
 
@@ -7,11 +8,12 @@ describe('Funcionalidade Endereço - Faturamento e Entrega', () => {
         cy.fixture('perfil').then(dados =>{
             cy.login(dados.usuario, dados.senha)
         })
-        cy.login('aluno_ebac@teste.com', 'teste@teste.com')
+       
     });
 
     it('Deve fazer cadastro de faturamento com sucesso', () => {
-        
+        EnderecoPage.editarEnderecoFaturamento()
         
     });
+    
 });

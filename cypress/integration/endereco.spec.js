@@ -12,8 +12,8 @@ describe('Funcionalidade Endereço - Faturamento e Entrega', () => {
     });
 
     it('Deve fazer cadastro de faturamento com sucesso', () => {
-        EnderecoPage.editarEnderecoFaturamento()
-        
+        EnderecoPage.editarEnderecoFaturamento('Flávio', 'Araujo', 'EBAC', 'sao paulo', '92', 'sao paulo', '95595000')
+        cy.get('.woocommerce-message').should('contain','Endereço alterado com sucesso.')
     });
     
 });
